@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Define variables
+COMMAND_NAME="internsctl"
+COMMAND_VERSION="v0.1.0"
+
+# Function to display command manual
+show_manual() {
+    echo "MANUAL PAGE"
+        echo "============"
+	    echo "NAME"
+	        echo "    $COMMAND_NAME - Custom Linux command for operations"
+		    echo ""
+		        echo "SYNOPSIS"
+			    echo "    $COMMAND_NAME [OPTION]..."
+			        echo ""
+				    echo "DESCRIPTION"
+				        echo "    Perform operations specified by options."
+					    echo ""
+					        # Add more sections as needed
+						}
+
+						# Function to display command help
+						show_help() {
+						    echo "HELP"
+						        echo "===="
+							    echo "Usage: $COMMAND_NAME [OPTION]..."
+							        echo ""
+								    echo "Options:"
+								        echo "    --help       Display this help message"
+									    echo "    --version    Display the command version"
+									        # Add more options and examples as needed
+										}
+
+										# Function to display command version
+										show_version() {
+										    echo "$COMMAND_NAME $COMMAND_VERSION"
+										    }
+
+										    # Main script logic
+										    case "$1" in
+										        --help)
+											        show_help
+												        ;;
+													    --version)
+													            show_version
+														            ;;
+															        *)
+																        show_manual
+																	        ;;
+																		esac
+
